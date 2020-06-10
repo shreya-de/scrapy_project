@@ -67,7 +67,7 @@ class Spider(scrapy.Spider):
                 yield response.follow(url, callback=self.parse, meta={'source_url': response.url})
 
         '''
-        Control coming below can belong to 2 cases:
+        Control coming below can belong to 3 cases:
             CASE I  : It's a PDF url which needs to be downloaded
             CASE II : It came after following a parent URL and having "meta_data" which needs to be saved and PDF will be downloaded
             CASE III: It was a general continuation after "yield" statement
